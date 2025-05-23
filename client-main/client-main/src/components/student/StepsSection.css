@@ -1,0 +1,83 @@
+.steps {
+  background-image: url("/steps-bg.png"); /* Correct path for public folder */
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 5rem 1rem; /* Increase padding for spacing */
+  min-height: 400px; /* Ensure enough height for the background image */
+}
+
+.steps__grid {
+  margin-top: 4rem;
+  display: flex; /* Use flexbox for horizontal layout */
+  justify-content: space-between; /* Space out the cards evenly */
+  gap: 2rem; /* Add spacing between cards */
+}
+
+.steps__card {
+  flex: 1; /* Make all cards equal width */
+  max-width: 250px; /* Optional: Set a max width for each card */
+  padding: 1.5rem;
+  background-color: var(--white);
+  border-radius: 5px;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+  position: relative;
+}
+
+.steps__card:nth-child(odd) {
+  transform: translateY(-1rem); /* Zigzag effect for odd cards */
+}
+
+.steps__card:nth-child(even) {
+  transform: translateY(1rem); /* Zigzag effect for even cards */
+}
+
+.steps__card span {
+  display: inline-block;
+  margin-bottom: 1rem;
+  padding: 5px 11px;
+  font-size: 1.5rem;
+  border-radius: 100%;
+}
+
+.steps__card:nth-child(1) span {
+  color: #fa4e09;
+  background-color: #fff9f6;
+}
+
+.steps__card:nth-child(2) span {
+  color: #6a38c2;
+  background-color: #e9ddff;
+}
+
+.steps__card:nth-child(3) span {
+  color: #3ac2ba;
+  background-color: #f0fffe;
+}
+
+.steps__card:nth-child(4) span {
+  color: #fbbc09;
+  background-color: #fff8e3;
+}
+
+.steps__card h4 {
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+.steps__card p {
+  color: var(--text-light);
+}
+
+.steps__card:hover {
+  background-color: #6a38c2; /* var(--primary-color) */
+  color: var(--white);
+}
+
+.steps__card:hover span {
+  background-color: var(--primary-color-dark);
+  color: var(--white);
+}

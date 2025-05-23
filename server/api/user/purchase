@@ -1,0 +1,1 @@
+const courseData = await Course.findById(courseId)
